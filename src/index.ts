@@ -5,12 +5,12 @@ async function main(): Promise<void> {
   try {
     const agent = new Agent()
 
-    agent.on('llm:pre', async (context) => {
+    agent.on('pre:llm', async (context) => {
       console.log('llm:pre', context.memory)
       return true
     })
 
-    agent.on('llm:post', async (context) => {
+    agent.on('post:llm', async (context) => {
       console.log('llm:post', context.memory)
       return true
     })

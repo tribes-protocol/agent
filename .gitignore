@@ -3,6 +3,8 @@ dist
 node_modules
 dist/
 built
-data/
+data/knowledgeFiles
+data/agent-keypair.json
+data/sqlite.db
 db.sqlite
 .idea

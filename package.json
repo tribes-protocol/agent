@@ -6,19 +6,20 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts",
     "lint": "eslint src/**/*.ts",
-    "dev": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "start": "NODE_ENV=production tsx dist/index.js",
-    "agent": "dotenv --e /root/.agentcoin-fun/env.production -- tsx dist/index.js"
+    "agent": "tsx dist/index.js"
   },
   "dependencies": {
-    "@elizaos/core": "0.1.9",
-    "@tribesxyz/ayaos": "0.0.33"
+    "@tribesxyz/ayaos": "0.0.34",
+    "zod": "3.24.2"
   },
   "engines": {
     "node": ">=22"
   },
   "resolutions": {
-    "onnxruntime-node": "1.20.0"
+    "onnxruntime-node": "1.20.0",
+    "zod": "3.24.2"
   },
   "devDependencies": {
     "@changesets/cli": "2.28.1",

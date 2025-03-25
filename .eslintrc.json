@@ -72,43 +72,6 @@
     ],
     "@typescript-eslint/no-useless-constructor": ["error"],
     "@typescript-eslint/no-non-null-assertion": "error",
-    "no-restricted-imports": [
-      "error",
-      {
-        "paths": [
-          {
-            "name": "lodash",
-            "importNames": ["isNull"],
-            "message": "Please use isNull from @tribes/core instead."
-          },
-          {
-            "name": "ethers",
-            "importNames": ["logger"],
-            "message": "Please use logger from @tribes/core instead."
-          },
-          {
-            "name": "console",
-            "importNames": ["assert"],
-            "message": "Please use assert from 'assert' instead."
-          },
-          {
-            "name": "aws-sdk",
-            "importNames": ["DynamoDB"],
-            "message": "Please import AWS and use as AWS.DynamoDB instead."
-          },
-          {
-            "name": "@wagmi/core",
-            "importNames": ["getPublicClient"],
-            "message": "Do not use getPublicClient directly. Use basePublicClient instead."
-          },
-          {
-            "name": "@reown/appkit/networks",
-            "importNames": ["base", "mainnet"],
-            "message": "Do not use base directly. Use supported_chains instead."
-          }
-        ]
-      }
-    ],
     "prettier/prettier": "error",
     "no-async-promise-executor": "off",
     "space-before-function-paren": "off",

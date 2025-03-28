@@ -1,5 +1,8 @@
 import { elizaLogger } from '@elizaos/core'
 import { Agent } from '@tribesxyz/ayaos'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 async function main(): Promise<void> {
   try {

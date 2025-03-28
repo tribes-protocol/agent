@@ -3,7 +3,7 @@ import { Agent } from '@tribesxyz/ayaos'
 
 async function main(): Promise<void> {
   try {
-    const agent = new Agent()
+    const agent = new Agent({ dataDir: process.env.DATA_DIR })
 
     agent.on('pre:llm', async (context) => {
       console.log('llm:pre', context.memory)

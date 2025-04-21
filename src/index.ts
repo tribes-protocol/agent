@@ -27,4 +27,4 @@ async function main(): Promise<void> {
 }
 
 console.log('hello, agent!')
-main().catch(elizaLogger.error)
+main().catch(console.error)

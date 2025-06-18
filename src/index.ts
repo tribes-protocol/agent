@@ -1,5 +1,4 @@
-import { elizaLogger } from '@elizaos/core'
-import { Agent } from '@tribesxyz/ayaos'
+import { Agent, ayaLogger } from '@tribesxyz/ayaos'
 import 'dotenv/config'
 
 async function main(): Promise<void> {
@@ -8,11 +7,12 @@ async function main(): Promise<void> {
 
     await agent.start()
 
-    elizaLogger.success('sdk initialized', agent.agentId)
-  } catch {
+    ayaLogger.info('sdk initialized', { agentId: agent.agentId })
+  } catch (error) {
+    ayaLogger.error('error initializing agent', { error })
     process.exit(1)
   }
 }
 
-console.log('hello, agent!')
+ayaLogger.info('hello, agent!')
 main().catch(console.error)

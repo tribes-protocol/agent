@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@elizaos/core": "0.1.9",
-    "@tribesxyz/ayaos": "0.1.21",
+    "@tribesxyz/ayaos": "0.1.54",
     "dotenv": "^16.5.0"
   },
   "engines": {
